@@ -1,7 +1,15 @@
+import React from 'react';
 import './HeaderOption.scss'
 import Avatar from '@mui/material/Avatar';
 
-export const HeaderOption = ({ avatar, Icon, title }) => {
+interface Props {
+  avatar?: string,
+  Icon?: React.ElementType,
+  title?: string
+
+}
+
+export const HeaderOption: React.FC<Props> = ({ avatar, Icon, title }) => {
   return (
     <div className='headerOption' >
       {Icon && <Icon className='headerOption__icon' />}

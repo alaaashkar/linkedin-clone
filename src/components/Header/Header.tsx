@@ -2,13 +2,13 @@ import React from "react";
 import './Header.scss'
 import SearchIcon from '@mui/icons-material/Search';
 import logo from './../../assets/images/linkedin-icon.png'
-import { HeaderOption } from "./HeaderOption/HeaderOption";
 import HomeIcon from '@mui/icons-material/Home';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import avatarIcon from '../../assets/images/avatar-image.jpg'
+import { HeaderOption } from "./HeaderOption/HeaderOption";
 
 export const Header = () => {
   return (
