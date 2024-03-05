@@ -2,9 +2,15 @@ import { Avatar } from '@mui/material';
 import './Sidebar.scss'
 import backgroundSplash from '../../assets/images/background-splash.jpg'
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../app/store';
 
 
 export const Sidebar = () => {
+
+  const user = useSelector((user: RootState) => user.user.user)
+
+  console.log(user)
 
   const recentItem = (topic: string) => (
 
@@ -19,11 +25,13 @@ export const Sidebar = () => {
       <div className='sidebar__top'>
         <img src={backgroundSplash} alt="" />
 
-        <Avatar className='sidebar__avatar' />
+        <Avatar src={user?.profilePic} className='sidebar__avatar' >
+          {user?.displayName && user.displayName[0]?.toLocaleUpperCase()}
+        </Avatar >
 
-        <h2>Ala El Achkar</h2>
+        <h2>{user?.displayName}</h2>
 
-        <h4>ala.elachkar.job@gmail.com</h4>
+        <h4>{user?.email}</h4>
 
       </div>
 
